@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&family=Young+Serif&display=swap');
 * {
     box-sizing: border-box;
-    @font-face {
-        font-family: "Young Serif";
-        src: url(https://fonts.google.com/specimen/Young+Serif);}
-
-    @font-face {
-        font-family: "Outfit";
-        src: url(https://fonts.google.com/specimen/Outfit);}
-
+    margin: 0px;
+}
+::-webkit-scrollbar {
+    width: 1px;
 }
 .App {
     font-family: Outfit, sans-serif;
@@ -18,6 +14,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    line-height: 140%;
 }
 .App-content {
     max-width: 735px;
@@ -34,10 +31,12 @@
     font-size: 35px;
     color: #302d2c;
     margin: 20px 0px 20px 0px;
+    line-height: normal;
 }
 .Description {
     font-weight: 500;
     margin-bottom: 30px;
+    /* line-height: 140%; */
 }
 .Preparation {
     max-width: 695px;
@@ -74,10 +73,13 @@ li.title  {
     font-size: 25px;
     color: #854632;
     font-weight: 700;
-    margin: 20px 0px 20px 0px;
+    margin: 30px 0px 30px 0px;
 }
-.Nutritin-desc {
-    font-weight: 500;
+.line {
+    max-width: 100%;
+    height: 1px;
+    background-color: #e4ded8;
+    margin-top: 22px;
 }
 ul.b {
     list-style-type: disc;
@@ -109,6 +111,9 @@ li.Instructions-title::marker {
     font-size: 14px;
     font-weight: 700;
 }
+.Nutritin-desc {
+    font-weight: 500;
+}
 table {
     table-layout: fixed;
     width: 100%;
@@ -127,4 +132,17 @@ tr {
 .data {
     font-weight: 700;
     color:#854632;
+}
+/* for mobile device */
+@media only screen and (max-width: 600px) {
+.App .App-content{
+    max-width: 375px;
+    padding: 30px 30px 10px 30px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;  
+}
+.App-title {
+    font-size: 30px;
+}
 }
